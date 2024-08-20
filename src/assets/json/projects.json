@@ -1,0 +1,183 @@
+[
+    {
+        "title": "Python Data Validation Library",
+        "name": "pyvalidify",
+        "status": ["Completed", "CI/CD"],
+        "dateCompleted": "08/2024",
+        "yearStarted": "2024",
+        "shortDescription": "Python library for automated and manual runtime data type validation. It focuses on utilizing type hints and handling subscribed generics. Can be easily integrated into any project as an automated or manual validator.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "github": "https://github.com/JPatryk13/pyvalidify",
+            "pypi": "https://pypi.org/project/pyvalidify/"
+        },
+        "highlights": [
+            "Python",
+            "PyPI",
+            "GitHub Actions"
+        ],
+        "publicCard": true,
+        "publicDescription": true
+    },
+    {
+        "title": "Portfolio Static Website",
+        "name": "portfolio-2024",
+        "status": ["Completed"],
+        "dateCompleted": "08/2024",
+        "yearStarted": "2024",
+        "shortDescription": "Well... you're looking at it now. It's a fully static website designed and built from scratch. I explored the use of Figma, Tailwind and React in combination with TypeScript.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "web": null,
+            "figma": null,
+            "github": null
+        },
+        "highlights": [
+            "TypeScript",
+            "React",
+            "Tailwind",
+            "CSS",
+            "HTML",
+            "Figma"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    },
+    {
+        "title": "AI-powered Job Search Engine",
+        "name": "just-want-to-get-a-job",
+        "status": ["WIP"],
+        "dateCompleted": null,
+        "yearStarted": "2024",
+        "shortDescription": "My first attempt at automating processes with machine learning. The tool features (or will feature) multi-phrase search over a given number of jobs and ML search model via Hugging Face API. The result is evaluated based on similarity.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "github": null
+        },
+        "highlights": [
+            "Python",
+            "Huggin Face",
+            "Selenium"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    },
+    {
+        "title": "Online Budgeting Platform",
+        "name": "budgething",
+        "status": ["WIP"],
+        "dateCompleted": null,
+        "yearStarted": "2023",
+        "shortDescription": "A web application designed to streamline managing spendings and income, analyze expense tendencies and plan for the future. Currently, the core API is complete and ready for deployment.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "web": null
+        },
+        "highlights": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostreSQL",
+            "MySQL",
+            "Docker",
+            "pandas",
+            "AWS",
+            "Firebase",
+            "Gherkin",
+            "PyQt"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    },
+    {
+        "title": "Console Game Against Minimax Optimizer",
+        "name": "triangle-game",
+        "status": ["Completed"],
+        "dateCompleted": "2022",
+        "yearStarted": "2022",
+        "shortDescription": "A simple, pure-Python game that combines relatively advanced console-based user interface with multiplayer options. I practised there minimax optimization alghorithm as a form of AI fighting against the player.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "github": "https://github.com/JPatryk13/triangle-game"
+        },
+        "highlights": [
+            "Python"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    },
+    {
+        "title": "Application for Sharing and Synchronising Decks Between Anki Accounts",
+        "name": "anki-share-and-collaborate",
+        "status": ["On Hold"],
+        "dateCompleted": null,
+        "yearStarted": "2022",
+        "shortDescription": "Unfinished prototype of a script/application that allows to share decks (collections of flash cards) between Anki mobile/desktop app users. The app was meant to keep track of the updates made by all users and keep them in sync.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "github": "https://github.com/JPatryk13/anki-share-and-colaborate-2022"
+        },
+        "highlights": [
+            "Python"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    },
+    {
+        "title": "Web Development Portfolio",
+        "name": "webdev-site-2021",
+        "status": ["Completed"],
+        "dateCompleted": "2021",
+        "yearStarted": "2020",
+        "shortDescription": "Full-stack project that motivated me to go beyond back-end and learn the basics of web design and front-end development. The app has been fully developped on top of Django.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "github": "https://github.c3om/JPatryk13/web-dev-site-2021"
+        },
+        "highlights": [
+            "Python",
+            "Django",
+            "Docker",
+            "PostreSQL",
+            "AWS",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bulma",
+            "Sass"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    },
+    {
+        "title": "Personal Portfolio",
+        "name": "portfolio-2019",
+        "status": ["Completed"],
+        "dateCompleted": "2020",
+        "yearStarted": "2019",
+        "shortDescription": "My first complete full-stack application involving some basic front-end development. The app has been fully developped on top of Django with the native SQLite3 database.",
+        "imgSource": null,
+        "contentResource": null,
+        "links": {
+            "github": "https://github.com/JPatryk13/portfolio-website-2019"
+        },
+        "highlights": [
+            "Python",
+            "Django",
+            "SQLite",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "JavaScript"
+        ],
+        "publicCard": true,
+        "publicDescription": false
+    }
+]

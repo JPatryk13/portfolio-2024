@@ -1,0 +1,90 @@
+import React from "react";
+import ProjectStatusBadge from "./ProjectStatusBadge"
+import { Link } from "react-router-dom";
+import { StyledLink } from "./TextEffect";
+
+interface ProjectCardProps {
+  title: string,
+  name: string,
+  status: string[],
+  shortDescription: string,
+  imgSource: string,
+  linked: boolean,
+  reverse?: boolean,
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  name,
+  status,
+  shortDescription,
+  imgSource,
+  linked,
+  reverse = false,
+}) => {
+  // all these have links attached to them
+  let projectTitleElement;
+  let projectImageElement;
+  let projectDescriptionElement;
+
+  if (linked) {
+    projectTitleElement = (
+      <Link to={"/project/" + name}>
+        <h3 className="flex flex-col text-3xl text-teal-deer">
+          {title}
+        </h3>
+      </Link>
+    );
+    projectImageElement = (
+      <Link to={"/project/" + name}>
+        <img
+          loading="lazy"
+          src={imgSource}
+          className="object-cover absolute inset-0 size-full"
+        />
+      </Link>
+    );
+    projectDescriptionElement = (
+      <p className="mt-3 text-white opacity-80">
+        {shortDescription} <Link to={"/project/" + name}><span className="text-teal-deer">Read more...</span></Link>
+      </p>
+    );
+  } else {
+    projectTitleElement = (
+      <h3 className="flex flex-col text-3xl text-teal-deer">
+        {title}
+      </h3>
+    );
+    projectImageElement = (
+      <img
+        loading="lazy"
+        src={imgSource}
+        className="object-cover absolute inset-0 size-full"
+      />
+    );
+    projectDescriptionElement = (
+      <p className="mt-3 text-white opacity-80">
+        {shortDescription}
+      </p>
+    );
+  }
+
+  return (
+    <div className={`flex gap-10 ${reverse ? "flex-row-reverse" : ""} h-64`}>
+      <div id="cardDescription" className="flex flex-col w-[60%]">
+        <div className={`flex flex-col pt-5 ${reverse ? "pr-7" : "pl-7"}`}>
+          {projectTitleElement}
+          <div className="flex flex-row mt-3 gap-1">{status.map((status) => (<ProjectStatusBadge status={status}/>))}</div>
+          {projectDescriptionElement}
+        </div>
+      </div>
+      <div id="cardImage" className="flex flex-col w-[40%]">
+        <div className="flex overflow-hidden relative flex-col grow justify-center">
+          {projectImageElement}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;
