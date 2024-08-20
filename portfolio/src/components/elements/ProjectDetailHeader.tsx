@@ -1,6 +1,6 @@
 import React from "react";
 import { HorizontalLine } from "./Line";
-import HeroText from "./HeroText";
+import { ProjectTitle } from "./HeroText";
 import Menu from "./Menu";
 import MediaIcons from "./MediaIcons";
 import { HorizontalArrowButton, HorizontalDirection } from "./ArrowButton";
@@ -62,7 +62,7 @@ const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({
             <HorizontalLine className="mt-[40vh] ml-[70vw] w-[30vw]" />
             <div className="flex flex-col ml-[15vw] w-[70vw] h-[50vh]">
                 <div className="flex flex-wrap justify-between leading-tight w-[63vw]">
-                    <HeroText aboveHeader={date} header={title} heroTextSize="text-6xl" className="w-[50vw]" />
+                    <ProjectTitle date={date} title={title} />
                     <Menu isHomePage={false} className="mt-[5vh]" />
                 </div>
                 <div className={`flex flex-wrap mt-[15vh] w-[80vw] justify-end`}>

@@ -3,7 +3,7 @@ import VisibleOnWindowSize from "../elements/VisibleOnWindowSize";
 import {HorizontalLine} from "../elements/Line";
 import MediaIcons from "../elements/MediaIcons";
 import Menu from "../elements/Menu";
-import HeroText from "../elements/HeroText";
+import {HeroText} from "../elements/HeroText";
 
 const Landing: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Landing: React.FC = () => {
       <HorizontalLine className="mt-[12vh] ml-[70vw] w-[30vw]" />
       <div className="flex flex-col mt-[5vh] ml-[15vw] w-[70vw] h-[50vh]">
         <div className="flex flex-wrap justify-between leading-tight w-[63vw]">
-          <HeroText aboveHeader="Hi, my name is" header="Patryk" className="mt-16"/>
+          <HeroText aboveHeader="Hi, my name is" header="Patryk"/>
           <Menu isHomePage={true} selectedId="homeMenuOption"/>
         </div>
         <div className="flex flex-wrap justify-between mt-2 leading-10 w-[80vw]">
