@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
           </h2>
         </div>
         <div className="flex flex-wrap mx-auto mt-36">
-          <div className="flex flex-col mx-auto px-24 w-[70vw] max-w-screen-xl">
+          <div id="projectCardsContainer" className="flex flex-col mx-auto px-24 w-[70vw] max-w-screen-xl">
             {projectsData.map((project, index) => {
               if (project.publicCard)
                 return (

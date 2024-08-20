@@ -6,7 +6,7 @@ const HeroText: React.FC<{ header: string, aboveHeader: string }> = ({ header, a
       <div className="text-xl pl-3 opacity-60 text-white">
         {aboveHeader}
       </div>
-      <h1 className={"mt-2 text-teal-deer text-9xl"}>
+      <h1 className={"mt-2 text-teal-deer text-9xl font-bold tracking-wider"}>
         {header}
       </h1>
     </div>

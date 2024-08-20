@@ -4,6 +4,7 @@ import { Section } from "../../components/elements/ProjectDescriptionSection";
 import { getProjectByName } from "../../Utils";
 import Footer from "../../components/sections/Footer";
 import { InlineCode, CodeBlock, StyledLink, UnorderedList, OrderedList, Table } from "../../components/elements/TextEffect";
+import { FlexWrapper } from "../../components/elements/MainWrapper";
 
 const PyValidify: React.FC = () => {
   const projectDetails = getProjectByName("pyvalidify");
@@ -54,7 +55,7 @@ const PyValidify: React.FC = () => {
     ],
   ]
   return (
-    <main className="flex overflow-hidden flex-col bg-neutral-900">
+    <FlexWrapper>
       <ProjectDetailHeader name={projectDetails.name} title={projectDetails.title} date={projectDetails.dateCompleted} />
       <Section>
         <p>
@@ -150,7 +151,7 @@ MyClass("John", "SY23 2JS, 3102 Bridge Street") # TypeError`}
         </CodeBlock>
       </Section>
       <Footer />
-    </main>
+    </FlexWrapper>
   );
 };
 

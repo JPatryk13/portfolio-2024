@@ -22,6 +22,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   linked,
   reverse = false,
 }) => {
+
+  let titleStyle = "flex flex-col text-3xl text-teal-deer";
+  let imageStyle = "object-cover absolute inset-0 size-full";
+  let descriptionStyle = "mt-3 text-white opacity-80 line-clamp-3";
+
   // all these have links attached to them
   let projectTitleElement;
   let projectImageElement;
@@ -30,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   if (linked) {
     projectTitleElement = (
       <Link to={"/project/" + name}>
-        <h3 className="flex flex-col text-3xl text-teal-deer">
+        <h3 className={titleStyle}>
           {title}
         </h3>
       </Link>
@@ -40,18 +45,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <img
           loading="lazy"
           src={imgSource}
-          className="object-cover absolute inset-0 size-full"
+          className={imageStyle}
         />
       </Link>
     );
     projectDescriptionElement = (
-      <p className="mt-3 text-white opacity-80">
-        {shortDescription} <Link to={"/project/" + name}><span className="text-teal-deer">Read more...</span></Link>
-      </p>
+      <>
+        <p className={descriptionStyle}>
+          {shortDescription}
+        </p>
+        <StyledLink href="">
+          <Link to={"/project/" + name} className="mt-2">
+            Read more...
+          </Link>
+        </StyledLink>
+      </>
     );
   } else {
     projectTitleElement = (
-      <h3 className="flex flex-col text-3xl text-teal-deer">
+      <h3 className={titleStyle}>
         {title}
       </h3>
     );
@@ -59,11 +71,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <img
         loading="lazy"
         src={imgSource}
-        className="object-cover absolute inset-0 size-full"
+        className={imageStyle}
       />
     );
     projectDescriptionElement = (
-      <p className="mt-3 text-white opacity-80">
+      <p className={descriptionStyle}>
         {shortDescription}
       </p>
     );
@@ -74,7 +86,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div id="cardDescription" className="flex flex-col w-[60%]">
         <div className={`flex flex-col pt-5 ${reverse ? "pr-7" : "pl-7"}`}>
           {projectTitleElement}
-          <div className="flex flex-row mt-3 gap-1">{status.map((status) => (<ProjectStatusBadge status={status}/>))}</div>
+          <div className="flex flex-row mt-3 gap-1">
+            {status.map((status) => (<ProjectStatusBadge status={status}/>))}
+          </div>
           {projectDescriptionElement}
         </div>
       </div>

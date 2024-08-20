@@ -1,9 +1,9 @@
-import React from "react";
 import {HorizontalArrowButton, HorizontalDirection} from "../components/elements/ArrowButton";
+import {GridWrapper} from "../components/elements/MainWrapper";
 
 export default function PageNotFound() {
     return (
-        <main className="grid overflow-hidden bg-neutral-900 h-[100vh] place-items-center">
+        <GridWrapper>
             <div className="text-center">
                 <h1 className="mt-2 text-7xl text-teal-deer">404</h1>
                 <p className="mt-2 text-xl opacity-60 text-white">seems like this page is missing</p>
@@ -17,6 +17,6 @@ export default function PageNotFound() {
                     />
                 </div>
             </div>
-        </main>
+            </GridWrapper>
     )
 }

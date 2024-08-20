@@ -19,7 +19,11 @@ const CodeBlock: React.FC<{ children: string }> = ({ children }) => {
 }
 
 const StyledLink: React.FC<{ children?: React.ReactNode, href: string }> = ({ children, href }) => {
-    return (<a href={href} className="flex flex-row underline text-teal-deer decoration-teal-deer">{children}<LinkIcon className="ml-1 mt-2" /></a>);
+    return (
+        <a href={href} className="flex flex-row underline text-teal-deer decoration-teal-deer">
+            {children}<LinkIcon className="ml-1 mt-2" />
+        </a>
+    );
 }
 
 const UnorderedList: React.FC<{ children?: Array<React.ReactNode> }> = ({ children }) => {

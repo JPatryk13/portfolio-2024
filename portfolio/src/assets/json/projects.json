@@ -112,7 +112,7 @@
         "publicDescription": false
     },
     {
-        "title": "Application for Sharing and Synchronising Decks Between Anki Accounts",
+        "title": "Sharing and Synchronising Anki Decs",
         "name": "anki-share-and-collaborate",
         "status": ["On Hold"],
         "dateCompleted": null,

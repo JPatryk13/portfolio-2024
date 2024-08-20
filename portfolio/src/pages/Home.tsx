@@ -2,14 +2,15 @@ import React from "react";
 import Landing from "../components/sections/Landing";
 import Projects from "../components/sections/Projects";
 import Footer from "../components/sections/Footer";
+import {FlexWrapper} from "../components/elements/MainWrapper";
 
 const Home: React.FC = () => {
   return (
-    <main className="flex overflow-hidden flex-col bg-neutral-900">
+    <FlexWrapper>
       <Landing />
       <Projects />
       <Footer />
-    </main>
+    </FlexWrapper>
   );
 };
 
