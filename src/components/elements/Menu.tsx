@@ -9,7 +9,7 @@ const Menu: React.FC<{ isHomePage: boolean, selectedId?: string | null, classNam
 
     let HomeMenuOption;
     if (selectedId === "homeMenuOption") {
-        HomeMenuOption = <a id="homeMenuOption" className="font-bold text-teal-deer">// Home</a>
+        HomeMenuOption = <span id="homeMenuOption" className="font-bold text-teal-deer">{'//'} Home</span>
     } else {
         HomeMenuOption = (
             <Link
@@ -26,7 +26,7 @@ const Menu: React.FC<{ isHomePage: boolean, selectedId?: string | null, classNam
 
     let ProjectsMenuOption;
     if (selectedId === "projectsMenuOption") {
-        ProjectsMenuOption = <a id="projectsMenuOption" className="mt-3 font-bold text-teal-deer">// Projects</a>
+        ProjectsMenuOption = <span id="projectsMenuOption" className="mt-3 font-bold text-teal-deer">{'//'} Projects</span>
     } else if (isHomePage) {
         ProjectsMenuOption = (
             <a
