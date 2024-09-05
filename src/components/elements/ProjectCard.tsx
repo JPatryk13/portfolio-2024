@@ -44,6 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <Link to={"/project/" + name}>
         <img
           loading="lazy"
+          alt=""
           src={imgSource}
           className={imageStyle}
         />
@@ -70,6 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     projectImageElement = (
       <img
         loading="lazy"
+        alt=""
         src={imgSource}
         className={imageStyle}
       />
