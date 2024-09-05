@@ -16,11 +16,10 @@ const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({
     name,
     date = null
 }) => {
-    const prevProject = getPreviousPublicProject(name)
-    const nextProject = getNextPublicProject(name)
+    const prevProject = getPreviousPublicProject(name);
+    const nextProject = getNextPublicProject(name);
 
-    const arrowsDivClassName = "mr-[15vw] gap-2"
-    let justifyBottomRow = "justify-between";
+    const arrowsDivClassName = "mr-[15vw] gap-2";
     let arrowsNav;
 
     if (prevProject === null && nextProject === null) {
