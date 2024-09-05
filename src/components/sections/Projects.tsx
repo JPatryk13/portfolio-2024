@@ -36,6 +36,8 @@ const Projects: React.FC = () => {
                     />
                   </div>
                 );
+              else
+                return (<></>);
             })}
           </div>
           <div className="flex flex-col gap-1">
