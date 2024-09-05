@@ -26,7 +26,6 @@ const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({
     if (prevProject === null && nextProject === null) {
 
         arrowsNav = (<></>);
-        justifyBottomRow = "justify-end"
 
     } else if (prevProject !== null && nextProject !== null) {
 
