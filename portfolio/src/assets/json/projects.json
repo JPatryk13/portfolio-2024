@@ -91,7 +91,7 @@
             "PyQt"
         ],
         "publicCard": true,
-        "publicDescription": false
+        "publicDescription": true
     },
     {
         "title": "Console Game Against Minimax Optimizer",

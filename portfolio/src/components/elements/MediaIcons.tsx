@@ -2,6 +2,8 @@ import React from "react";
 import { ReactComponent as EmailIcon } from "../../assets/icons/email.svg"
 import { ReactComponent as GithubIcon } from "../../assets/icons/github.svg"
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin.svg"
+
+
 const MediaIcons: React.FC<{ orientation?: string }> = ({ orientation = "horizontal" }) => {
     var cls = ""
   

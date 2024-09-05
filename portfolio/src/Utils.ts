@@ -34,5 +34,18 @@ function getPreviousPublicProject(currentProjectName: string): typeof projects[0
     return targetProjectDetails;
 }
 
+const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 8);
+    }
+};
 
-export { getProjectByName, getNextPublicProject, getPreviousPublicProject }
+function scrollToElement(elementId: string) {
+    const element = document.getElementById(elementId);
+    window.scrollTo({top: element?.offsetTop, behavior: "smooth"});
+}
+
+
+export { getProjectByName, getNextPublicProject, getPreviousPublicProject, scrollToTop, scrollToElement }
