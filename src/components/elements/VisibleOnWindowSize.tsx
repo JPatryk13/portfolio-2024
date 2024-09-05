@@ -26,7 +26,7 @@ const VisibleOnWindowSize: React.FC<{
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [minWidth, minHeight]);
 
   return isVisible ? <>{children}</> : null;
 };
