@@ -43,7 +43,7 @@
             "Figma"
         ],
         "publicCard": true,
-        "publicDescription": false
+        "publicDescription": true
     },
     {
         "title": "AI-powered Job Search Engine",
