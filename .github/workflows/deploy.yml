@@ -94,5 +94,4 @@ jobs:
           # remote-password: ${{ secrets.IONOS_PASSWORD }}
           remote-password: 238f466b-bb5f-437f-b5fd-0fe8c3891a0f
           local-path: ./build/
-          remote-path: ./kunden/homepages/28/d1018479829/htdocs/
           debug: true
