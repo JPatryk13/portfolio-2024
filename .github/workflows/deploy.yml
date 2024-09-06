@@ -71,5 +71,4 @@ jobs:
           server: ${{secrets.IONOS_SERVER}}
           username: ${{secrets.IONOS_USER}}
           password: ${{secrets.IONOS_PASSWORD}}
-          local-dir: ./build
-          
+          local-dir: ./build/
