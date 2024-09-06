@@ -72,8 +72,8 @@ jobs:
       #     uploads: |
       #         ./build/ => ./kunden/homepages/28/d1018479829/htdocs/
 
-      # - name: Build
-      #   run: npm run build
+      - name: Build
+        run: npm run build
 
       # - name: Deploy
       #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
