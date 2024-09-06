@@ -31,7 +31,7 @@ const ShortDescription: React.FC = () => {
   return (
     <p className="self-start pl-2 mt-12 text-3xl text-white opacity-60">
       Software engineer from London <br /> Building things that help
-      people
+      people {':)'}
     </p>
   );
 };
