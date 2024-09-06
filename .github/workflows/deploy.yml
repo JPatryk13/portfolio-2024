@@ -63,4 +63,4 @@ jobs:
                 password: ${{secrets.IONOS_PASSWORD}}
                 port: 22
                 uploads: |
-                    ./build/ => ./kunden/homepages/28/d1018479829/htdocs/
+                    ./build/ => ./kunden/homepages/28/d1018479828/htdocs/
