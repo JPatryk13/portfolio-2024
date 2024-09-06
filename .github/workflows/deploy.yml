@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # - name: Deploy to IONOS
+      # - name: Deploy
       #   uses: Dylan700/sftp-upload-action@latest
       #   with:
       #     server: ${{secrets.IONOS_SERVER}}
@@ -65,13 +65,24 @@ jobs:
       #     uploads: |
       #         ./build/ => ./kunden/homepages/28/d1018479829/htdocs/
 
-      - name: Build
-        run: npm run build
+      # - name: Build
+      #   run: npm run build
+
+      # - name: Deploy
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      #   with:
+      #     server: ${{secrets.IONOS_SERVER}}
+      #     username: ${{secrets.IONOS_USER}}
+      #     password: ${{secrets.IONOS_PASSWORD}}
+      #     local-dir: ./build/
 
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: milanmk/actions-file-deployer@master
         with:
-          server: ${{secrets.IONOS_SERVER}}
-          username: ${{secrets.IONOS_USER}}
-          password: ${{secrets.IONOS_PASSWORD}}
-          local-dir: ./build/
+          remote-protocol: sftp
+          remote-host: ${{secrets.IONOS_SERVER}}
+          remote-user: ${{secrets.IONOS_PASSWORD}}
+          remote-password: ${{ secrets.IONOS_PASSWORD }}
+          local-path: ./build/
+          remote-path: ./kunden/homepages/28/d1018479829/htdocs/
+          debug: true
