@@ -1,4 +1,4 @@
-import {HorizontalButton, HorizontalDirection} from "../components/elements/ArrowButton";
+import {HorizontalButton, HorizontalDirection} from "../components/elements/Button";
 import {GridWrapper} from "../components/elements/MainWrapper";
 
 export default function PageNotFound() {
