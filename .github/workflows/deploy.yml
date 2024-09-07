@@ -48,4 +48,3 @@ jobs:
           remote-password: ${{secrets.IONOS_TEST_PASSWORD}}
           remote-path: /portfolio/001-2024
           local-path: ./build/
-          debug: true
