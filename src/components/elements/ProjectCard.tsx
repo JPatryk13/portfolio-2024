@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectStatusBadge from "./ProjectStatusBadge"
 import { Link } from "react-router-dom";
-import { StyledLink } from "./TextEffect";
 import { HorizontalButton, HorizontalDirection } from "./Button";
 
 interface ProjectCardProps {
