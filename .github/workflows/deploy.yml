@@ -93,5 +93,6 @@ jobs:
           remote-user: acc309474922
           # remote-password: ${{ secrets.IONOS_PASSWORD }}
           remote-password: 238f466b-bb5f-437f-b5fd-0fe8c3891a0f
+          remote-path: /portfolio/001-2024
           local-path: ./build/
           debug: true
