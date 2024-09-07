@@ -3,7 +3,7 @@ import { HorizontalLine } from "./Line";
 import { ProjectTitle } from "./HeroText";
 import Menu from "./Menu";
 import MediaIcons from "./MediaIcons";
-import { HorizontalButton, HorizontalDirection } from "./ArrowButton";
+import { HorizontalButton, HorizontalDirection } from "./Button";
 import { getPreviousPublicProject, getNextPublicProject } from "../../Utils"
 
 interface ProjectDetailHeaderProps {
