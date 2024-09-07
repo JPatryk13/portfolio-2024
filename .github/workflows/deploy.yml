@@ -44,7 +44,7 @@ jobs:
         with:
           remote-protocol: sftp
           remote-host: ${{secrets.IONOS_TEST_SERVER}}
-          remote-user: ${{ secrets.IONOS_TEST_PASSWORD }}
+          remote-user: ${{ secrets.IONOS_TEST_USER }}
           remote-password: ${{secrets.IONOS_TEST_PASSWORD}}
           remote-path: /portfolio/001-2024
           local-path: ./build/
