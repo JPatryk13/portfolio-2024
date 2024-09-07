@@ -2,6 +2,7 @@ import React from "react";
 import ProjectStatusBadge from "./ProjectStatusBadge"
 import { Link } from "react-router-dom";
 import { StyledLink } from "./TextEffect";
+import { HorizontalButton, HorizontalDirection } from "./Button";
 
 interface ProjectCardProps {
   title: string,
@@ -55,11 +56,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className={descriptionStyle}>
           {shortDescription}
         </p>
-        <StyledLink href="">
-          <Link to={"/project/" + name} className="mt-2">
-            Read more...
-          </Link>
-        </StyledLink>
+        {/* <HorizontalButton 
+            text="Read more"
+            goTo={"/project/" + name}
+            direction={HorizontalDirection.None}
+            textJustify={HorizontalDirection.Left}
+            widthClass="w-[20rem]"
+            color="teal-deer"
+            opacity="100"
+        /> */}
       </>
     );
   } else {
@@ -84,14 +89,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   }
 
   return (
-    <div className={`flex gap-10 ${reverse ? "flex-row-reverse" : ""} h-64`}>
-      <div id="cardDescription" className="flex flex-col w-[60%]">
-        <div className={`flex flex-col pt-5 ${reverse ? "pr-7" : "pl-7"}`}>
-          {projectTitleElement}
-          <div className="flex flex-row mt-3 gap-1">
-            {status.map((status) => (<ProjectStatusBadge status={status}/>))}
+    <div className={`flex gap-10 ${reverse ? "flex-row-reverse" : "flex-row"} h-64`}>
+      <div id="cardDescription" className={`flex flex-col justify-between w-[60%] ${reverse ? "pr-7" : "pl-7"}`}>
+        <div className="flex flex-row">
+          {/* Title and main description */}
+          <div className="flex flex-col pt-5">
+            {projectTitleElement}
+            <div className="flex flex-row mt-3 gap-1">
+              {status.map((status) => (<ProjectStatusBadge status={status}/>))}
+            </div>
+            {projectDescriptionElement}
           </div>
-          {projectDescriptionElement}
+        </div>
+        <div className="flex flex-row">
+          {/* Button that snaps to the bottom */}
+          <HorizontalButton
+            text="Read more"
+            goTo={"/project/" + name}
+            direction={HorizontalDirection.None}
+            textJustify={HorizontalDirection.Left}
+            widthClass="w-[15rem]"
+            color="teal-deer"
+            opacity="100"
+          />
         </div>
       </div>
       <div id="cardImage" className="flex flex-col w-[40%]">
