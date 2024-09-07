@@ -21,7 +21,7 @@ interface HorizontalArrowButtonProps {
     textJustify?: HorizontalDirection,
 }
 
-const HorizontalArrowButton: React.FC<HorizontalArrowButtonProps> = ({
+const HorizontalButton: React.FC<HorizontalArrowButtonProps> = ({
     text,
     goTo = "",
     className = "",
@@ -47,7 +47,8 @@ const HorizontalArrowButton: React.FC<HorizontalArrowButtonProps> = ({
 
 
     return (
-        <div className={"flex flex-col " + className}>
+        // `place-items-start` - to reset any `place-items-*` styles pre-imposed when creating grid layout 
+        <div className={"flex flex-col place-items-start " + className}>
             <Link to={goTo} className={"my-1 text-white " + (hovered ? "" : "opacity-60")}>
                 <div
                     className={textStyle}
@@ -63,4 +64,4 @@ const HorizontalArrowButton: React.FC<HorizontalArrowButtonProps> = ({
     );
 };
 
-export { HorizontalArrowButton, HorizontalDirection, VerticalDirection };
+export { HorizontalButton, HorizontalDirection, VerticalDirection };
