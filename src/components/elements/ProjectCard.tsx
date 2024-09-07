@@ -30,7 +30,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   // all these have links attached to them
   let projectTitleElement;
   let projectImageElement;
-  let projectDescriptionElement;
 
   if (linked) {
     projectTitleElement = (
@@ -50,22 +49,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       </Link>
     );
-    projectDescriptionElement = (
-      <>
-        <p className={descriptionStyle}>
-          {shortDescription}
-        </p>
-        {/* <HorizontalButton 
-            text="Read more"
-            goTo={"/project/" + name}
-            direction={HorizontalDirection.None}
-            textJustify={HorizontalDirection.Left}
-            widthClass="w-[20rem]"
-            color="teal-deer"
-            opacity="100"
-        /> */}
-      </>
-    );
   } else {
     projectTitleElement = (
       <h3 className={titleStyle}>
@@ -80,11 +63,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         className={imageStyle}
       />
     );
-    projectDescriptionElement = (
-      <p className={descriptionStyle}>
-        {shortDescription}
-      </p>
-    );
   }
 
   return (
@@ -97,16 +75,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <div className="flex flex-row mt-3 gap-1">
               {status.map((status) => (<ProjectStatusBadge status={status}/>))}
             </div>
-            {projectDescriptionElement}
+            <p className={descriptionStyle}>
+              {shortDescription}
+            </p>
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className={`flex flex-row` + (!reverse ? ` self-end` : ``)}>
           {/* Button that snaps to the bottom */}
           <HorizontalButton
             text="Read more"
             goTo={"/project/" + name}
             direction={HorizontalDirection.None}
-            textJustify={HorizontalDirection.Left}
+            textJustify={reverse ? HorizontalDirection.Left : HorizontalDirection.Right}
             widthClass="w-[15rem]"
             color="teal-deer"
             opacity="100"
