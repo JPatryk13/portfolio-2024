@@ -3,7 +3,7 @@ import { HorizontalLine } from "./Line";
 import { ProjectTitle } from "./HeroText";
 import Menu from "./Menu";
 import MediaIcons from "./MediaIcons";
-import { HorizontalArrowButton, HorizontalDirection } from "./ArrowButton";
+import { HorizontalButton, HorizontalDirection } from "./ArrowButton";
 import { getPreviousPublicProject, getNextPublicProject } from "../../Utils"
 
 interface ProjectDetailHeaderProps {
@@ -30,8 +30,17 @@ const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({
 
         arrowsNav = (
             <div className={arrowsDivClassName}>
-                <HorizontalArrowButton text="previous" goTo={`/project/${prevProject.name}`} widthClass="w-[10rem] lg:w-[14rem]" className="ml-[10vw] lg:ml-[20vw]" direction={HorizontalDirection.Left} textJustify={HorizontalDirection.Right} />
-                <HorizontalArrowButton text="next" goTo={`/project/${nextProject.name}`} widthClass="w-[10rem] lg:w-[14rem]" className="ml-[10vw] lg:ml-[20vw]" />
+                <HorizontalButton
+                    text="previous" goTo={`/project/${prevProject.name}`}
+                    widthClass="w-[10rem] lg:w-[14rem]"
+                    className="ml-[10vw] lg:ml-[20vw]"
+                    direction={HorizontalDirection.Left}
+                    textJustify={HorizontalDirection.Right} />
+                <HorizontalButton
+                    text="next"
+                    goTo={`/project/${nextProject.name}`}
+                    widthClass="w-[10rem] lg:w-[14rem]"
+                    className="ml-[10vw] lg:ml-[20vw]" />
             </div>
         );
 
@@ -40,7 +49,11 @@ const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({
         // onl next project available
         arrowsNav = (
             <div className={arrowsDivClassName}>
-                <HorizontalArrowButton text="next" goTo={`/project/${nextProject.name}`} widthClass="w-[10rem] lg:w-[14rem]" className="ml-[10vw] lg:ml-[20vw]" />
+                <HorizontalButton
+                    text="next"
+                    goTo={`/project/${nextProject.name}`}
+                    widthClass="w-[10rem] lg:w-[14rem]"
+                    className="ml-[10vw] lg:ml-[20vw]" />
             </div>
         );
 
@@ -49,7 +62,13 @@ const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({
         // only previous project available
         arrowsNav = (
             <div className={arrowsDivClassName}>
-                <HorizontalArrowButton text="previous" goTo={`/project/${prevProject.name}`} widthClass="w-[10rem] lg:w-[14rem]" className="ml-[10vw] lg:ml-[20vw]" direction={HorizontalDirection.Left} textJustify={HorizontalDirection.Right} />
+                <HorizontalButton
+                    text="previous"
+                    goTo={`/project/${prevProject.name}`}
+                    widthClass="w-[10rem] lg:w-[14rem]"
+                    className="ml-[10vw] lg:ml-[20vw]"
+                    direction={HorizontalDirection.Left}
+                    textJustify={HorizontalDirection.Right} />
             </div>
         );
 
