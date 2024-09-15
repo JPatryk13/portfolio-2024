@@ -1,15 +1,16 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ProjectCard from "../elements/ProjectCard";
 import {HorizontalLine, VerticalLine} from "../elements/Line";
 import projectsData from "../../assets/json/projects.json";
 
 
 // (half-card height) - (3xl text line height) = (((64 / 2) / 4)rem - 2.25rem
-const VerticalLineHalfHeightREM = `h-[5.75rem]`;
+const VerticalLineHalfHeightREM = `h-[5.5rem]`;
 // (card height) + (spacing) - 2 * (3xl text line height) = ((64 + 36) / 4)rem - 4.5rem
-const VerticalLineFullHeightREM = `h-[20.5rem]`;
+const VerticalLineFullHeightREM = `h-[20rem]`;
 
 const Projects: React.FC = () => {
+  
   return (
     <section id="projectsSection" className="flex flex-col pt-10 pb-20 w-full">
       <div className="flex flex-wrap justify-between w-full pr-6">
@@ -26,13 +27,8 @@ const Projects: React.FC = () => {
                 return (
                   <div key={index} className={`${index !== 0 ? "mt-36" : ""}`}>
                     <ProjectCard
-                      title={project.title}
-                      name={project.name}
-                      status={project.status}
-                      shortDescription={project.shortDescription}
-                      imgSource={project.imgSource !== null ? project.imgSource : "https://cdn.builder.io/api/v1/image/assets/TEMP/da912916d30f9ecec87d13f5a99f789773d92364214cb45ea134a471c88611e0?placeholderIfAbsent=true&apiKey=4d41f6c15a964c1bb94820575475574a"}
+                      projectData={project}
                       reverse={index % 2 !== 0}
-                      linked={project.publicDescription}
                     />
                   </div>
                 );
