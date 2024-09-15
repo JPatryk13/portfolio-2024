@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import ProjectCard from "../elements/ProjectCard";
 import {HorizontalLine, VerticalLine} from "../elements/Line";
 import projectsData from "../../assets/json/projects.json";
